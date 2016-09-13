@@ -12,7 +12,7 @@ public class GreetingController {
 
 	private final AtomicLong counter=new AtomicLong();
 	
-	@RequestMapping({"/greeting","/g","/hello"})
+	@RequestMapping({"/greeting","/g"})
 	public Greeting greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, 
 			                 @RequestParam(value="template", required=false, defaultValue="0") String template, Model model){
 		model.addAttribute("name", name);
